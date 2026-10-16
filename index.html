@@ -1,13 +1,148 @@
-gie-store/
-├── index.html
-├── checkout.html
-├── css/
-│   ├── reset.css
-│   ├── style.css
-│   └── responsive.css
-├── js/
-│   ├── config.js
-│   ├── render.js
-│   └── order.js
-└── assets/
-    └── qris.png         ← upload gambar QRIS kamu
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GIE STORE — Joki Game Profesional</title>
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header-inner">
+    <a href="#" class="logo">
+      <span class="logo-mark">G</span>
+      <span class="logo-text" id="brandName">GIE STORE</span>
+    </a>
+    <nav class="nav">
+      <a href="#layanan">Layanan</a>
+      <a href="#order">Order</a>
+      <a href="#kontak">Kontak</a>
+    </nav>
+    <a href="#" class="btn-wa-header" id="headerWa">Chat WA</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-text">
+      <span class="badge">PROSES INSTAN · 24 JAM</span>
+      <h1>Joki Game <span class="accent">Cepat & Aman</span></h1>
+      <p id="heroDesc">Naik rank tanpa ribet. Dikerjakan player pro.</p>
+      <div class="hero-cta">
+        <a href="#order" class="btn-primary">Order Sekarang</a>
+        <a href="#layanan" class="btn-ghost">Lihat Layanan</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong id="statOrders">2.400+</strong><span>Order Selesai</span></div>
+        <div class="stat"><strong id="statRating">4.9/5</strong><span>Rating</span></div>
+        <div class="stat"><strong id="statSpeed">~1 Hari</strong><span>Rata-rata Selesai</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="card-glow"></div>
+      <div class="card-mock">
+        <div class="mock-header">
+          <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        </div>
+        <div class="mock-body">
+          <div class="mock-row"><span>Rank</span><strong>Mythic → Immortal</strong></div>
+          <div class="mock-bar"><div class="mock-fill"></div></div>
+          <div class="mock-row"><span>Progress</span><strong>78%</strong></div>
+          <div class="mock-row"><span>Status</span><strong class="green">On Going</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="layanan">
+  <div class="container">
+    <div class="section-head">
+      <h2>Daftar Layanan</h2>
+      <p>Pilih layanan yang kamu butuh, order langsung via WhatsApp.</p>
+    </div>
+    <div class="grid" id="serviceGrid"></div>
+  </div>
+</section>
+
+<section class="order" id="order">
+  <div class="container">
+    <div class="section-head">
+      <h2>Form Order</h2>
+      <p>Isi data, klik kirim, langsung terhubung ke WhatsApp kami.</p>
+    </div>
+    <form class="order-form" id="orderForm">
+      <div class="field">
+        <label for="nama">Nama / Nickname</label>
+        <input type="text" id="nama" placeholder="Contoh: Gie01" required>
+      </div>
+      <div class="field">
+        <label for="game">Game</label>
+        <select id="game" required></select>
+      </div>
+      <div class="field">
+        <label for="layanan">Jenis Layanan</label>
+        <select id="layanan" required></select>
+      </div>
+      <div class="field">
+        <label for="catatan">Catatan (opsional)</label>
+        <textarea id="catatan" rows="3" placeholder="Rank awal, rank tujuan..."></textarea>
+      </div>
+      <button type="submit" class="btn-primary btn-block">Order via WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<section class="qris-section" id="qris">
+  <div class="container">
+    <div class="section-head">
+      <h2>Bayar Pakai QRIS</h2>
+      <p>Scan pakai DANA, GoPay, OVO, ShopeePay, atau m-banking.</p>
+    </div>
+    <div class="qris-box">
+      <img src="assets/qris.png" alt="QRIS GIE STORE" id="qrisImage">
+      <p class="qris-owner" id="qrisOwner">GIE STORE</p>
+      <p class="qris-note">Setelah bayar, kirim bukti ke WhatsApp admin.</p>
+      <a href="#" class="btn-primary" id="waAfterPay">Kirim Bukti ke WA</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" id="kontak">
+  <div class="container footer-inner">
+    <div>
+      <div class="logo">
+        <span class="logo-mark">G</span>
+        <span class="logo-text">GIE STORE</span>
+      </div>
+      <p class="footer-desc">Layanan joki game profesional.</p>
+    </div>
+    <div>
+      <h4>Kontak</h4>
+      <ul>
+        <li><a id="footerWa" href="#">WhatsApp</a></li>
+        <li><a id="footerIg" href="#">Instagram</a></li>
+        <li><a id="footerTt" href="#">TikTok</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Jam Operasional</h4>
+      <ul>
+        <li>Senin–Minggu</li>
+        <li>08.00 – 23.00 WIB</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> GIE STORE</p>
+  </div>
+</footer>
+
+<script src="js/config.js"></script>
+<script src="js/render.js"></script>
+<script src="js/order.js"></script>
+</body>
+    </html>
