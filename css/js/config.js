@@ -2,9 +2,9 @@ const CONFIG = {
   storeName: "GIE STORE",
   heroDesc: "Naik rank tanpa ribet. Dikerjakan player pro, progress bisa dipantau, akun dijamin aman.",
 
-  whatsapp: "6281234567890",
-  instagram: "https://instagram.com/giestore",
-  tiktok: "https://tiktok.com/@giestore",
+  whatsapp: "6283190842000",
+  instagram: "https://instagram.com/algixz1",
+  tiktok: "https://tiktok.com/@giestore123",
 
   qrisOwner: "GIE STORE",
 
